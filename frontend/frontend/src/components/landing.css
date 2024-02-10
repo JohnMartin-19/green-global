@@ -14,13 +14,20 @@
     position: relative;
 }
 .btn{
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
     width: 10%;
     height: 45px;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
+    margin: 1rem 0.2rem;
     background-color: #294b29;
     text-decoration: none;
+}
+
+.heading .btn{
+    display: inline-flex;
+    flex-direction: column;
+    
 }
 .hero-img button Link{
     text-decoration: none;
@@ -53,4 +60,19 @@
 
 span{
     color: #294b29;
+}
+.container-fluid{
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+}
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+.head{
+    text-decoration: underline;
 }
