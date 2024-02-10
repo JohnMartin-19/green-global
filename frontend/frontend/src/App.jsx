@@ -24,11 +24,11 @@ function App() {
 				<Route path="/" element={<LandingPage />} />
 				<Route path="/about" element={<About />} />
 				<Route
-					path="/events"
+					path="/services"
 					element={<Service />}
 				/>
-				<Route path="/annual" element={<Review />}/>
-				<Route path="/team" element={<Contact />} />
+				<Route path="/reviews" element={<Review />}/>
+				<Route path="/contact" element={<Contact />} />
 				<Route
 					path="/sign-up"
 					element={<SignUp />}

@@ -11,6 +11,7 @@ function Review(){
             }}
         >
             <h1>Welcome to GeeksforGeeks Blogs</h1>
+            <p>wassup</p>
         </div>
     );
 }
