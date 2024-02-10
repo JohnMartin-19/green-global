@@ -9,13 +9,12 @@ import {
 	Route,
 } from "react-router-dom";
 
-import About from "./AboutUs";
-import Events from "./pages/events";
-import AnnualReport from "./pages/annual";
-import Teams from "./pages/team";
-import Blogs from "./pages/blogs";
-import SignUp from "./pages/signup";
+import About from "./components/AboutUs";
+import Service from "./components/Services";
+import Review from './components/Reviews'
+import SignUp from "./components/SignUp";
 import LandingPage from "./components/landing";
+import Contact from "./components/Contact";
 
 function App() {
 	return (
@@ -26,14 +25,10 @@ function App() {
 				<Route path="/about" element={<About />} />
 				<Route
 					path="/events"
-					element={<Events />}
+					element={<Service />}
 				/>
-				<Route
-					path="/annual"
-					element={<AnnualReport />}
-				/>
-				<Route path="/team" element={<Teams />} />
-				<Route path="/blogs" element={<Blogs />} />
+				<Route path="/annual" element={<Review />}/>
+				<Route path="/team" element={<Contact />} />
 				<Route
 					path="/sign-up"
 					element={<SignUp />}
