@@ -39,31 +39,29 @@ function Footer(){
 					<Column>
 						<Heading>Services</Heading>
 						<FooterLink href="#">
-							Writing
+							Empowering Farmers
 						</FooterLink>
 						<FooterLink href="#">
-							Internships
+							Supporting Local Agriculture
 						</FooterLink>
 						<FooterLink href="#">
-							Coding
+							Farmers Market Place
 						</FooterLink>
-						<FooterLink href="#">
-							Teaching
-						</FooterLink>
+						
 					</Column>
 					<Column>
 						<Heading>Contact Us</Heading>
 						<FooterLink href="#">
-							Uttar Pradesh
+							Mburu-CEO
 						</FooterLink>
 						<FooterLink href="#">
-							Ahemdabad
+							Ezra-DATA ANALYST
 						</FooterLink>
 						<FooterLink href="#">
-							Indore
+							Kimani-Co-Founder
 						</FooterLink>
 						<FooterLink href="#">
-							Mumbai
+							Adrine-LEGAL
 						</FooterLink>
 					</Column>
 					<Column>
@@ -115,6 +113,8 @@ function Footer(){
 					</Column>
 				</Row>
 			</FooterContainer>
+            <div className="cc" style={{color:'#294B29',textAlign: "center",
+					marginTop: "20px"}}>&copy;-GREENGLOBAL-2024</div>
 		</Box>
 	);
 };
