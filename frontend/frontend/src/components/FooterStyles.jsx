@@ -7,7 +7,7 @@ export const Box = styled.div`
 	background: black;
 	// position: absolute;
 	bottom: 0;
-	width: 95%;
+	width: 100%;
 
 	@media (max-width: 1000px) {
 		// padding: 70px 30px;
@@ -53,7 +53,7 @@ export const FooterLink = styled.a`
 	text-decoration: none;
 
 	&:hover {
-		color: green;
+		color: #294B29;
 		transition: 200ms ease-in;
 	}
 `;

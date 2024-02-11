@@ -1,6 +1,7 @@
 import {React} from "react";
 import './landing.css'
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 function LandingPage(){
     return(
         <div>
@@ -44,6 +45,9 @@ function LandingPage(){
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className="footer">
+                <Footer/>
             </div>
 
         </div>

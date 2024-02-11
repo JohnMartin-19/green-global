@@ -13,13 +13,15 @@ function Footer(){
 		<Box>
 			<h1
 				style={{
-					color: "green",
+					color: "#294B29",
 					textAlign: "center",
 					marginTop: "10px",
 				}}
 			>
-				A Computer Science Portal for Geeks!
+				    GREENGLOBAL
 			</h1>
+            <br />
+            <br />
 			<FooterContainer>
 				<Row>
 					<Column>
@@ -28,7 +30,7 @@ function Footer(){
 							Aim
 						</FooterLink>
 						<FooterLink href="#">
-							Vision
+							Mision
 						</FooterLink>
 						<FooterLink href="#">
 							Testimonials
