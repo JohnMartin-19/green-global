@@ -68,11 +68,18 @@ span{
 }
 .row {
     display: flex;
+    line-height: 45px;
+    font-size: 20px;
   }
   
   .column {
     flex: 50%;
+    border: #294b29 solid thin;
+    padding: 25px;
   }
 .head{
     text-decoration: underline;
+}
+.purpose{
+    text-align: justify;
 }
