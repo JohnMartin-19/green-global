@@ -10,7 +10,7 @@ function Review(){
                 height: "100vh",
             }}
         >
-            <h1>Welcome to GeeksforGeeks Blogs</h1>
+            <h1>Here are some of our customer reviews</h1>
             <p>wassup</p>
         </div>
     );
