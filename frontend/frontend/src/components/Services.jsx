@@ -9,7 +9,7 @@ function Service(){
                 height: "100vh",
             }}
         >
-            <h1>Annual Report</h1>
+            <h1>Some of the services we provide include:</h1>
         </div>
     );
 }
