@@ -16,7 +16,7 @@ class FarmerAdmin(admin.ModelAdmin):
     add_form = FarmerSignupForm
     form = FarmerUpdateForm
     model = Farmer
-    list_display = ['username','email','phone','farm_name','location']
+    list_display = ['username','email','password','phone','farm_name','location']
     
 admin.site.register(Buyer, BuyerAdmin)
 admin.site.register(Farmer, FarmerAdmin)
