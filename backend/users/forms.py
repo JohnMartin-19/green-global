@@ -4,17 +4,17 @@ from .models import Buyer,Farmer
 class  BuyerSignUpForm(UserCreationForm):
     class Meta():
         model = Buyer
-        fields = ['username', 'email','password','phone']
+        fields = ['username', 'email','phone']
 class BuyerUpdateForm(UserChangeForm):
     class Meta():
         model = Buyer
-        fields = ['username','password', 'email','phone']
+        fields = ['username', 'email','phone']
             
 class FarmerSignupForm(UserCreationForm):
     class Meta():
         model = Farmer
-        fields = ['username','password','email','phone','farm_name','location']
+        fields = ['username','email','phone','farm_name','location']
 class FarmerUpdateForm(UserChangeForm):
     class Meta():
         model= Farmer
-        fields = ['username','password','email','phone','farm_name','location']
+        fields = ['username','email','phone','farm_name','location']

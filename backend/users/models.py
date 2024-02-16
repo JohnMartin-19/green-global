@@ -4,7 +4,6 @@ from django.contrib.auth.models import AbstractUser
 
 class  CustomUser(models.Model):
     username = models.CharField(max_length=128)
-    password = models.CharField(max_length=128)
     email = models.EmailField(('email address'), unique=True)
     phone = models.IntegerField(unique=True)
     address = models.CharField(max_length=500)
