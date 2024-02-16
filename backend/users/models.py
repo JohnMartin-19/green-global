@@ -6,16 +6,18 @@ class  CustomUser(models.Model):
     username = models.CharField(max_length=128)
     password = models.CharField(max_length=128)
     email = models.EmailField(('email address'), unique=True)
-    phone = models.IntegerField(unique=True,max_length=13)
+    phone = models.IntegerField(unique=True)
     address = models.CharField(max_length=500)
 
+    
 class Buyer(CustomUser):
-    orders = models.ForeignKey('Order', on_delete=models.CASCADE)
+    orders = models.CharField(max_length = 60)
     def __str__(self):
         return self.username
 class Farmer(CustomUser):
     farm_name = models.CharField(max_length=64)
-    products = models.ForeignKey("Product",on_delete=models.CASCADE)
+
+    
     location = models.CharField(max_length=128) 
 
     def __str__(self):
