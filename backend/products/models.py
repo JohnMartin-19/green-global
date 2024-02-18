@@ -2,7 +2,7 @@ from django.db import models
 import uuid
 # Create your models here.
 class Products(models.Model):
-    product_id = models.UUIDField(primary_key=True,editable=False,default = uuid.uuid4)
+    product_id = models.IntegerField(primary_key=True,editable=False)
     product_name = models.CharField(max_length=100, null=False)
     price = models.IntegerField(null=False)
     quantity = models.CharField(max_length=50)  # can be a number or text like "dozen"
