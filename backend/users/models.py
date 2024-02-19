@@ -8,7 +8,7 @@ ROLE_CHOICES = (
     ('Farmer','Farmer')
 )
 class User(AbstractUser):
-    username = models.CharField(max_length=128)
+    username = models.CharField(max_length=128,unique = True)
     email = models.EmailField(('email address'), unique=True)
     password = models.CharField(max_length=96,unique = True)
     phone = models.IntegerField(unique=True)

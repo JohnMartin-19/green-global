@@ -10,6 +10,7 @@ class User_Admin(UserAdmin):
     form = UserUpdateForm
     model = User
     list_display = ['username', 'email','phone','is_staff']
-    fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("name",)}),)
-add_fieldsets = UserAdmin.add_fieldsets + ((None, {"fields": ("name",)}),)
+
+fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("username",)}),)
+add_fieldsets = UserAdmin.add_fieldsets + ((None, {"fields": ("username",)}),)
 admin.site.register(User, User_Admin)
