@@ -7,11 +7,10 @@ ROLE_CHOICES = (
     ('Buyer','Buyer'),
     ('Farmer','Farmer')
 )
-class User(AbstractUser):
-    username = models.CharField(max_length=128,unique = True)
-    email = models.EmailField(('email address'), unique=True)
-    password = models.CharField(max_length=96,unique = True)
-    phone = models.IntegerField(null = True)
-    address = models.CharField(max_length=500,null = True)
-    orders = models.CharField(max_length = 60)
-    role = models.CharField(choices = ROLE_CHOICES,max_length = 10,default = '---')
+class CustomUser(AbstractUser):
+    name = models.CharField(null=True, blank=True, max_length=100)
+    username = models.CharField(max_length=50, unique=True)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=16)
+    phone_number = models.CharField(max_length=20)
+    role = models.CharField(choices=ROLE_CHOICES, max_length=10)

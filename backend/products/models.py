@@ -1,5 +1,5 @@
 from django.db import models
-from users.models import User
+from users.models import CustomUser
 # Create your models here.
 class Product(models.Model):
     product_id = models.IntegerField(primary_key=True)
@@ -8,4 +8,4 @@ class Product(models.Model):
     is_out_of_stock = models.BooleanField(default =False)
     description = models.CharField(max_length = 200)
     image = models.ImageField(null = True)
-    user = models.ForeignKey(User, on_delete = models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
