@@ -1,21 +1,17 @@
 from django.db import models
-from django.conf import settings
+from django.contrib.auth.models import AbstractUser
 from products.models import Products
 # Create your models here
-class Buyer(models.Model):
-    buyer_id = models.IntegerField(primary_key=True,unique=True)
+
+ROLE_CHOICES = (
+    ('Buyer','Buyer'),
+    ('Farmer','Farmer')
+)
+class User(AbstractUser):
     username = models.CharField(max_length=128)
     email = models.EmailField(('email address'), unique=True)
+    password = models.CharField(max_length=96,unique = True)
     phone = models.IntegerField(unique=True)
     address = models.CharField(max_length=500,null = True)
     orders = models.CharField(max_length = 60)
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-class Farmer(models.Model):
-    farmer_id =models.IntegerField(primary_key=True, editable=False)
-    username = models.CharField(max_length=128)
-    email = models.EmailField(('email address'), unique=True)
-    phone = models.IntegerField(unique=True)
-    address = models.CharField(max_length=500,null = True)
-    farm_name = models.CharField(max_length=64)
-    location = models.CharField(max_length=128) 
-    
+    role = models.CharField(choices = ROLE_CHOICES,max_length = 10,default = '---')
