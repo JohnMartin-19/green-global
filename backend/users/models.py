@@ -1,5 +1,6 @@
 from django.db import models
-import uuid
+from django.conf import settings
+from products.models import Products
 # Create your models here
 class Buyer(models.Model):
     buyer_id = models.IntegerField(primary_key=True,unique=True)
@@ -8,8 +9,7 @@ class Buyer(models.Model):
     phone = models.IntegerField(unique=True)
     address = models.CharField(max_length=500,null = True)
     orders = models.CharField(max_length = 60)
-    def __str__(self):
-        return self.username
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 class Farmer(models.Model):
     farmer_id =models.IntegerField(primary_key=True, editable=False)
     username = models.CharField(max_length=128)
@@ -18,7 +18,4 @@ class Farmer(models.Model):
     address = models.CharField(max_length=500,null = True)
     farm_name = models.CharField(max_length=64)
     location = models.CharField(max_length=128) 
-
-    def __str__(self):
-        return self.farm_name + " - " + self.location
     
