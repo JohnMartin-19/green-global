@@ -14,3 +14,4 @@ class CustomUser(AbstractUser):
     password = models.CharField(max_length=16)
     phone_number = models.CharField(max_length=20)
     role = models.CharField(choices=ROLE_CHOICES, max_length=10)
+    
