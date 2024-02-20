@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import CustomUser
+from order.models import Order
 # Create your models here.
 class Product(models.Model):
     product_id = models.IntegerField(primary_key=True)
@@ -9,3 +10,4 @@ class Product(models.Model):
     description = models.CharField(max_length = 200)
     image = models.ImageField(null = True)
     user = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
+    order = models.ManyToManyField(Order, related_name='products')
