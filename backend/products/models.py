@@ -1,6 +1,7 @@
 from django.db import models
 from users.models import CustomUser
 from orders.models import Order
+from categories.models import  Category
 # Create your models here.
 class Product(models.Model):
     product_id = models.IntegerField(primary_key=True)
@@ -11,3 +12,4 @@ class Product(models.Model):
     image = models.ImageField(null = True)
     user = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
     order_id = models.ManyToManyField(Order)
+    category_id = models.ForeignKey(Category,on_delete = models.CASCADE,null = True)
