@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
         'name',
         "username",
         "email",
-        "phone",
+        "phone_number",
         "role",
         )
         model = CustomUser
