@@ -8,4 +8,5 @@ urlpatterns = [
     path('api/v1/products/', include('products.urls')),
     path('api/v1/orders/',include('orders.urls')),
     path('api/v1/categories/' ,include('categories.urls')),
+    path('api/v1/reviews/', include(('reviews.urls'))),
 ]
