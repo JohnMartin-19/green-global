@@ -12,6 +12,8 @@ urlpatterns = [
     path('api/v1/reviews/', include(('reviews.urls'))),
     #url path for auth
     path("api/v1/dj-rest-auth/", include("dj_rest_auth.urls")),
+    path("api/v1/dj-rest-auth/registration/", # new
+        include("dj_rest_auth.registration.urls")),
 ]
 
 admin.site.site_header = "Green-Global Admin"
