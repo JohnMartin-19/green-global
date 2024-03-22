@@ -11,8 +11,8 @@ urlpatterns = [
     path('api/v1/categories/' ,include('categories.urls')),
     path('api/v1/reviews/', include(('reviews.urls'))),
     #url path for auth
-    path("api/v1/dj-rest-auth/", include("dj_rest_auth.urls")),
-    path("api/v1/dj-rest-auth/registration/", # new
+    path("api/v1/", include("dj_rest_auth.urls")),
+    path("api/v1/register/", # new
         include("dj_rest_auth.registration.urls")),
 ]
 
