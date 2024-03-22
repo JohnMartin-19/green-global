@@ -29,11 +29,15 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+JAZZMIN_UI_TWEAKS = {
+    
+    "dark_mode_theme": "darkly",
+}
 
 INSTALLED_APPS = [
     #decorating admin panel
     'jazzmin',
-    
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
