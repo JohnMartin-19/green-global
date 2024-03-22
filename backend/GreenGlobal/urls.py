@@ -11,3 +11,7 @@ urlpatterns = [
     path('api/v1/categories/' ,include('categories.urls')),
     path('api/v1/reviews/', include(('reviews.urls'))),
 ]
+
+admin.site.site_header = "Green-Global Admin"
+admin.site.site_title = "Green-Global Admin Portal"
+admin.site.index_title = "Welcome to Green-Global Portal"
