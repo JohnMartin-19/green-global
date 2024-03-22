@@ -8,3 +8,6 @@ class Order(models.Model):
     quantity = models.PositiveIntegerField()
     total_price = models.FloatField(default=0)
     time = models.TimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user} + {self.time}"

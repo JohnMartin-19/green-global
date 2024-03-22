@@ -8,3 +8,6 @@ class Review(models.Model):
     review_message = models.CharField(max_length = 200)
     rating = models.PositiveIntegerField(null = True)
     review_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.product_id} | {self.review_message}'

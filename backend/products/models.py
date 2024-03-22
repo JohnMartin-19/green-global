@@ -13,3 +13,6 @@ class Product(models.Model):
     user = models.ForeignKey(CustomUser, on_delete = models.CASCADE)
     order_id = models.ManyToManyField(Order)
     category_id = models.ForeignKey(Category,on_delete = models.CASCADE,null = True)
+
+    def __str__(self):
+        return f"{ self.product_name} +  | Price: KSH + {str(self.price)}+  User: + {self.user.username}"
