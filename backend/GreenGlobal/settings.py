@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "dj_rest_auth.registration",
     #oauth
     'oauth2_provider',
+    'provider',
     #local
     'users.apps.UsersConfig',
     'products.apps.ProductsConfig',
