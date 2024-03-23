@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     "allauth.account", # new
     "allauth.socialaccount",
     "dj_rest_auth.registration",
+    #oauth
+    'oauth2_provider',
     #local
     'users.apps.UsersConfig',
     'products.apps.ProductsConfig',
@@ -115,6 +117,8 @@ REST_FRAMEWORK = {
         #"rest_framework.authentication.SessionAuthentication",
         #"rest_framework.authentication.TokenAuthentication",
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+
         ],
 }
 
